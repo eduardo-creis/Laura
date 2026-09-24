@@ -1,0 +1,219 @@
+
+:root {
+  --rosa: #9b72cf;
+  --rosa-claro: #eee5fa;
+  --texto: #39264d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: var(--texto);
+  background: radial-gradient(circle at top, #fffaff, #e5d6f7);
+  overflow-x: hidden;
+}
+
+.card {
+  width: min(100%, 440px);
+  padding: 25px 22px 30px;
+  text-align: center;
+  background: rgba(255,255,255,.92);
+  border: 1px solid #d8c2f0;
+  border-radius: 28px;
+  box-shadow: 0 16px 50px #7046a326;
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  display: inline-block;
+  padding: 7px 13px;
+  background: var(--rosa-claro);
+  color: #7046a3;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 16px 0 10px;
+  font-size: clamp(27px, 7vw, 36px);
+  line-height: 1.15;
+}
+
+.subtitulo {
+  margin: 0 0 18px;
+  line-height: 1.6;
+}
+
+/* FOTO PRINCIPAL */
+
+.foto-area {
+  width: 100%;
+  height: 310px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d9c3f3, #f6efff);
+  border: 3px solid white;
+  box-shadow: 0 5px 20px #7046a326;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7046a3;
+  margin: 0 auto 12px;
+}
+
+.foto-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+/* BOTÃO DE ESCOLHER FOTO */
+
+.foto-placeholder {
+  padding: 20px;
+  font-size: 15px;
+}
+
+.upload {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--rosa-claro);
+  color: #7046a3;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.upload input {
+  display: none;
+}
+
+/* MENSAGEM */
+
+.mensagem {
+  background: #faf7ff;
+  border: 1px dashed #c7a8e8;
+  border-radius: 18px;
+  padding: 17px;
+  line-height: 1.75;
+  white-space: pre-line;
+  text-align: left;
+  font-size: 15px;
+}
+
+/* CONTADOR */
+
+.contador {
+  margin: 18px 0;
+  padding: 15px 10px;
+  border-radius: 18px;
+  background: var(--rosa-claro);
+}
+
+.contador strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+/* BOTÃO SURPRESA */
+
+.botao {
+  border: 0;
+  border-radius: 999px;
+  padding: 13px 22px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #9b72cf, #7046a3);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 15px #7046a34d;
+}
+
+.resposta {
+  display: none;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #7046a3;
+}
+
+/* RODAPÉ */
+
+.rodape {
+  margin-top: 20px;
+  font-size: 12px;
+  opacity: .7;
+}
+
+/* MINHA DITADORA */
+
+.ditadora {
+  margin-top: 25px;
+  padding: 12px;
+  text-align: center;
+  border-top: 1px dashed #c7a8e8;
+}
+
+.ditadora h3 {
+  font-size: 16px;
+  color: #7046a3;
+  margin-bottom: 10px;
+}
+
+.foto-ditadora {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #c7a8e8;
+  box-shadow: 0 4px 12px #7046a326;
+}
+
+.ditadora p {
+  font-size: 12px;
+  color: #7046a3;
+  margin-top: 8px;
+}
+
+/* CORAÇÕES FLUTUANTES */
+
+.coracao {
+  position: fixed;
+  bottom: -30px;
+  z-index: 0;
+  animation: subir 7s linear infinite;
+  opacity: .65;
+  pointer-events: none;
+}
+
+@keyframes subir {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: .7;
+  }
+
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
